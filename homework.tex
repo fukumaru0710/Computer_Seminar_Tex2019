@@ -4,22 +4,46 @@
 \begin{document}
 
 \begin{center}
-{\large }
+{\large コンピュータゼミ 2019 宿題}
 \end{center}
 
-\section{}
+\section{1章}
+私達の研究室では主にシステムやソフトウェアの信頼性に関する研究を行っています.主にそれらを確率論によってモデル化し,解析することで信頼性の評価を行います.\\
 
+具体的には以下のような確率過程を用いることが多いです.\\
 \begin{itemize}
-
+\vspace{-4mm}
+\item NHPP\\
+\vspace{-6mm}
+\item CTMC\\
 \end{itemize}
+\section{2章}
+卒業論文や原稿の作成のさいには \LaTeX
+を使って文書を作成します. \LaTeX
+は数式などを含むような文章を綺麗に作成するための言語です.\\
+\section{3章}
+確率変数がX指数分布に従う時,その分布関数$F_X(t)$と密度関数$f_X(t)$は,\\
 
 \begin{align}
 F_X(t)  &=  1-e^{-\lambda t} \label{F_X} \\
-
+f_X(t)  &=  \lambda e^{-\lambda t}\label{f_X}
 \end{align}
+となる.またその期待値は定義より,\\
 
+\begin{align}
+E[X] &= \int_0^{\infty} tf_X(t)dt\nonumber\\
+    &= [(1-e^{-\lambda t})t]_0^{\infty}-\int_0^{\infty} (1-e^{-\lambda t})dt\nonumber\\
+     &= [(1-e^{-\lambda t})t]_0^{\infty}-[t+\frac{1}{\lambda}e^{-\lambda t} ]_0^{\infty}\nonumber\\
+     &=\frac{1}{\lambda}\label{E_X}
+\end{align}
+となる.(extra 宿題: 式(\ref{E_X})を導出してみよう ヒント:部分積分)\\
+\section{4章}
+表をつくることもできます
+\begin{center}
 \begin{tabular}{|c|c|c|}\hline
  1 & 2 & 3 \\\hline
+ α & β & γ\\\hline
 \end{tabular}
+\end{center}
 
 \end{document}
